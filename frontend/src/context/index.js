@@ -16,7 +16,6 @@ export const GlobalContextProvider = ({ children }) => {
 
   useEffect(() => {
     const userDataLocalStorage = JSON.parse(localStorage.getItem('user'))
-    console.log('ini user data local storage ==> ', userDataLocalStorage)
     if(userDataLocalStorage) { setUserData(userDataLocalStorage) }
   }, [])
 
