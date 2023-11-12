@@ -1,0 +1,42 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+.popupPokedex {
+  @include container(transparent, auto, 100%);
+  @include flex(column, none, none);
+}
+.popupPokedexHexagram {
+  @include flex(row, center, center);
+  padding: 2em 1em;
+}
+.popupPokedexData {
+  @include flex(column, none, none);
+  width: 100%;
+}
+.popupPokedexDataQuestion, .popupPokedexDataAnswer {
+  @include ellipsis;
+  width: 100%;
+}
+.popupPokedexDataQuestion {
+  font-size: 0.8em;
+}
+.popupPokedexDataAnswer {
+  color: $first-color;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+@media(min-width: 768px) {
+  .popupPokedexData {
+    @include flex(row, center, none);
+    margin: 0.25em 0;
+  }
+  .popupPokedexDataQuestion {
+    width: 25%;
+  }
+  .popupPokedexDataAnswer {
+    margin-bottom: 0;
+    font-size: 1em;
+    width: 75%;
+  }
+}

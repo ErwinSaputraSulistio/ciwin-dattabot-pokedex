@@ -1,0 +1,14 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+.statisticTypeWrapper {
+  @include flex(column, center, center);
+  margin-bottom: 3em;
+  padding: 0 1.5em;
+}
+.statisticTypeTitle {
+  color: $fourth-color;
+  font-size: 0.8em;
+  margin-bottom: 1em;
+  text-align: center;
+}

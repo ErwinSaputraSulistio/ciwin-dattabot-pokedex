@@ -1,0 +1,32 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+@keyframes barStickAnimation {
+  0% { transform: scaleY(0); }
+  100% { transform: scaleY(1); }
+}
+
+.bar {
+  @include flex(row, center, space-between);
+}
+.barValues, .barStickGroup {
+  @include container(none, 100%, none);
+}
+.barValues {
+  @include flex(column, flex-end, space-around);
+  border-right: 1px solid $first-color;
+  padding-right: 0.5em;
+}
+.barStickGroup {
+  @include flex(row, flex-end, space-evenly);
+  border-bottom: 1px solid $first-color;
+  flex-grow: 1;
+}
+.barStick {
+  @include flex(row, flex-end, center);
+  animation: barStickAnimation 0.5s;
+  transform-origin: bottom;
+}
+.barStickName {
+  margin-bottom: -1.5em;
+}

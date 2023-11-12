@@ -1,0 +1,12 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+.hexagramLineGroup {
+  @include container(transparent, 100%, 100%);
+  @include flex(column, center, center);
+  position: absolute;
+}
+.hexagramLine {
+  border-top: 1px solid #222227;
+  position: absolute;
+}

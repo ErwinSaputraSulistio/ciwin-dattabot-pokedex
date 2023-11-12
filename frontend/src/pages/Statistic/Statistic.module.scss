@@ -1,0 +1,16 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+.statistic {
+  @include container($second-color, auto, 100%);
+  @include flex(column, center, flex-start);
+  min-height: 100vh;
+  padding-top: 15vh;
+}
+
+@media(min-width: 768px) {
+  .statistic {
+    @include flex(row, flex-start, space-around);
+    padding-top: 20vh;
+  }
+}

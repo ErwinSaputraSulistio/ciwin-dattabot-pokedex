@@ -1,0 +1,41 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+@keyframes lineDataBarAnimation {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+.line {
+  @include flex(row, center, space-between);
+}
+.lineChart, .lineStickGroup {
+  @include container(none, 100%, none);
+}
+.lineChart {
+  @include flex(column, flex-end, space-around);
+  border-left: 1px solid $first-color;
+  padding-right: 0.5em;
+  width: 100%;
+}
+.lineData {
+  @include flex(row, center, none);
+  margin-left: -10em;
+  width: 100%;
+}
+.lineDataName {
+  @include ellipsis;
+  margin-left: -6em;
+  margin-right: 1em;
+  text-align: right;
+  width: 5em;
+}
+.lineDataBar {
+  animation: lineDataBarAnimation 0.5s;
+  transform-origin: left;
+}
+.lineMaxValues {
+  @include flex(row, center, space-around);
+  position: absolute;
+  width: 100%;
+}

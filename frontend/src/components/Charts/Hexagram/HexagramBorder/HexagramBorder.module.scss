@@ -1,0 +1,18 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+.hexagramBorder, .hexagram {
+  @include flex(row, center, center);
+}
+.hexagramBorder, .hexagram {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.hexagramBorder {
+  @include container($first-color, 100%, 100%);
+}
+.hexagram {
+  @include container($third-color, 99%, 99%);
+}
+.hexagramDetail {
+  position: absolute;
+}

@@ -1,0 +1,17 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+.list {
+  @include container($second-color, auto, 100%);
+  min-height: 100vh;
+  padding-top: 7.5em;
+}
+.listLoader {
+  @include flex(row, center, center);
+  margin: 1em 0;
+  width: 100%;
+}
+.listLoaderImage {
+  height: 2.5em;
+  width: 2.5em;
+}

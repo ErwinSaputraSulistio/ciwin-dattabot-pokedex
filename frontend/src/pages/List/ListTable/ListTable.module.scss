@@ -1,0 +1,38 @@
+@import 'styles/mixins.scss';
+@import 'styles/variables.scss';
+
+.listTable{
+  box-sizing: border-box;
+  padding: 0 1.5em;
+  width: 100%;
+}
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+th, td {
+  border: 1px solid $first-color;
+  text-align: left;
+  padding: 0.5em;
+}
+th {
+  background-color: $first-color;
+  color: $second-color;
+}
+.tableRow {
+  cursor: pointer;
+  transition-duration: 0.25s;
+}
+.tableRow:hover {
+  opacity: 0.5;
+}
+.tableFirstColumn, .tableSecondColumn, .tableThirdColumn {
+  @include ellipsis;
+}
+.tableFirstColumn, .tableThirdColumn {
+  width: 25%;
+}
+.tableSecondColumn {
+  width: 50%;
+}
